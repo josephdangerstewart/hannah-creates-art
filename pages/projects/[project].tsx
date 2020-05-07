@@ -4,6 +4,7 @@ import { GetStaticProps, GetStaticPaths } from 'next';
 import { getServerOnlyProjectRepository } from '../../api/server-util';
 import { IProject } from '../../types/IProject';
 import { ContentHeader } from '../../components/content-header';
+import { ImageGallery } from '../../components/image-gallery';
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
 	const { project: id } = params;
@@ -35,6 +36,9 @@ export default function ProjectPage({ project }: { project: IProject }) {
 				imageUrl={project.thumbnail}
 				description={project.projectDescription}
 				color="accent2"
+			/>
+			<ImageGallery
+				images={project.photos}
 			/>
 		</Page>
 	);

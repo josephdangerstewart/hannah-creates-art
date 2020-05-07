@@ -18,7 +18,7 @@ export const ContentHeader: React.FC<ContentHeaderProps> = ({
 	imageUrl,
 	color,
 }) => (
-	<ColumnLayout margin="30px 0 0">
+	<ColumnLayout margin="30px 0 60px">
 		<Column>
 			<ColumnContent padding="0 60px 0 0">
 				<ContentContainer position="left" maxWidth={350}>
