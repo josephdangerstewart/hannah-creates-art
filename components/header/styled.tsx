@@ -9,9 +9,19 @@ export const Container = styled.div`
 	align-items: center;
 `;
 
+export const LogoLink = styled.a`
+	text-decoration: none;
+	cursor: pointer;
+`;
+
 export const LogoText = styled.span<{ color: keyof Theme['color'] }>`
 	font: 35px ${({ theme }) => theme.font.headerFont};
 	color: ${({ theme, color }) => theme.color[color]};
+	${({ theme }) => theme.generateTransition('color')}
+
+	${LogoLink}:hover & {
+		color: ${({ color, theme }) => theme.hover(theme.color[color])};
+	}
 `;
 
 const LinkText = styled.a`

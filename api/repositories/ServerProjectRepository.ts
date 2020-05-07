@@ -9,8 +9,6 @@ const readdir = util.promisify(fs.readdir);
 const readFile = util.promisify(fs.readFile);
 const exists = util.promisify(fs.exists);
 
-const ID_REGEX = /^[a-zA-Z-0-9]*$/g;
-
 export class ServerProjectRepository implements IProjectRepository {
 	private basePath = '';
 	
@@ -32,6 +30,7 @@ export class ServerProjectRepository implements IProjectRepository {
 				const parsedContent = yaml.parse(content);
 
 				if (!parsedContent) {
+					console.log('returning null in get projects');
 					return null;
 				}
 
@@ -47,7 +46,7 @@ export class ServerProjectRepository implements IProjectRepository {
 	}
 
 	public async getProject(id: string): Promise<IProject> {
-		if (!ID_REGEX.test(id)) {
+		if (!/^[a-zA-Z-0-9]*$/.test(id)) {
 			return null;
 		}
 
