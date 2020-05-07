@@ -1,4 +1,5 @@
 import React from 'react';
+import NextLink from 'next/link';
 import { styled, Theme } from '../theme';
 
 export const Container = styled.div`
@@ -24,9 +25,10 @@ export const LogoText = styled.span<{ color: keyof Theme['color'] }>`
 	}
 `;
 
-const LinkText = styled.a`
+const LinkText = styled.span`
 	font: 18px ${({ theme }) => theme.font.bodyFont};
 	color: ${({ theme }) => theme.color.white};
+	text-decoration: none !important;
 `;
 
 const LinkWrapper = styled.div<{ color: keyof Theme['color'] }>`
@@ -34,24 +36,42 @@ const LinkWrapper = styled.div<{ color: keyof Theme['color'] }>`
 	height: 68px;
 	background-color: ${({ theme, color }) => theme.color[color]};
 	border-radius: 50%;
+	${({ theme }) => theme.generateTransition('background-color')}
 
 	margin-right: 10px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	cursor: pointer;
+
+	&:hover {
+		background-color: ${({ theme, color }) => theme.hover(theme.color[color])}
+	}
 
 	&:last-child {
 		margin-right: 0;
 	}
 `;
 
+const StyledLink = styled.a`
+	text-decoration: none;
+`;
+
 export const Link: React.FC<{ color: keyof Theme['color']; href?: string }> = ({
 	color,
 	children,
 	href,
-}) => (
+}) => href ? (
+	<NextLink href={href}>
+		<StyledLink>
+			<LinkWrapper color={color}>
+				<LinkText>{children}</LinkText>
+			</LinkWrapper>
+		</StyledLink>
+	</NextLink>
+) : (
 	<LinkWrapper color={color}>
-		<LinkText href={href}>{children}</LinkText>
+		<LinkText>{children}</LinkText>
 	</LinkWrapper>
 );
 

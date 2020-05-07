@@ -3,6 +3,7 @@ import { CircleImage } from '../circle-image';
 
 export const StyledCircleImage = styled(CircleImage)`
 	cursor: pointer;
+	${({ theme }) => theme.generateTransition('background-color')}
 `;
 
 export const Container = styled.div`

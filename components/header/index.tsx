@@ -23,7 +23,7 @@ export const Header: React.FC = () => {
 			<LinkContainer>
 				<Link color="accent1">about</Link>
 				<Link color="accent2">blog</Link>
-				<Link color="accent3">works</Link>
+				<Link color="accent3" href="/">works</Link>
 			</LinkContainer>
 		</Container>
 	);
