@@ -37,7 +37,7 @@ export class ServerProjectRepository implements IProjectRepository {
 
 				return {
 					...parsedContent,
-					href: `/${id}`,
+					href: `/projects/${id}`,
 					id,
 				};
 			})
@@ -64,7 +64,7 @@ export class ServerProjectRepository implements IProjectRepository {
 		return {
 			...parsedContents,
 			id,
-			href: `/${id}`,
+			href: `/projects/${id}`,
 		} as IProject;
 	}
 }

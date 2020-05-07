@@ -1,12 +1,18 @@
 import React from 'react';
 import { Page } from '../components/page';
-import { IProject } from '../types/IProject';
 import { ProjectLinks } from '../components/project-links';
+import { GetStaticProps } from 'next';
+import { getServerOnlyProjectRepository } from '../api/server-util';
 
-const projects: IProject[] = [
-];
+export const getStaticProps: GetStaticProps = async () => {
+	const repository = getServerOnlyProjectRepository();
+	const projects = await repository.getProjects();
+	return {
+		props: { projects },
+	};
+};
 
-export default function Index() {
+export default function Index({ projects }) {
 	return (
 		<Page>
 			<ProjectLinks

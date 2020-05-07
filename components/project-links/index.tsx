@@ -17,9 +17,11 @@ export const ProjectLinks: React.FC<ProjectLinksProps> = ({ projects }) => {
 			{projects.map(p => (
 				<FlexLinkWrapper key={p.href}>
 					<Link href={p.href}>
-						<StyledCircleImage
-							imageUrl={p.thumbnail}
-						/>
+						<a>
+							<StyledCircleImage
+								imageUrl={p.thumbnail}
+							/>
+						</a>
 					</Link>
 				</FlexLinkWrapper>
 			))}
