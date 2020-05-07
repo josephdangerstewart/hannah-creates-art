@@ -30,10 +30,12 @@ export const ContentHeader: React.FC<ContentHeaderProps> = ({
 			</ColumnContent>
 		</Column>
 		<Column>
-			<ContentContainer position="right" maxWidth={400}>
-				<Title color={color}>{title}</Title>
-				<BodyText>{description}</BodyText>
-			</ContentContainer>
+			<ColumnContent>
+				<ContentContainer position="right" maxWidth={400}>
+					<Title color={color}>{title}</Title>
+					<BodyText>{description}</BodyText>
+				</ContentContainer>
+			</ColumnContent>
 		</Column>
 	</ColumnLayout>
 );
