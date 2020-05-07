@@ -1,8 +1,6 @@
 name: Test Project
 projectDescription: >
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi molestie nisi ac est tempor, at rhoncus dui sagittis. Fusce gravida eget urna nec rhoncus. Quisque nec tempus justo. Fusce condimentum nunc quis sapien consectetur facilisis. Phasellus eleifend orci ipsum, et maximus metus luctus a. Maecenas rutrum quam quis nisi ornare blandit. Aenean interdum pellentesque libero lobortis porta.
-  
-  Donec ornare nibh eget nisi mollis, sed ornare lacus commodo. Maecenas viverra rhoncus quam, ac molestie quam fringilla sit amet. Nullam fringilla et orci eu ornare. Proin condimentum mollis lectus et egestas. Phasellus volutpat, sapien et mollis pharetra, odio nisl aliquam est, eget suscipit nisl dolor quis turpis. Praesent dictum egestas sem. Sed sit amet malesuada lectus.
 thumbnail: https://via.placeholder.com/200?text=This%20is%20a%20thumbnail
 photos:
   - https://via.placeholder.com/200?text=This%20is%20a%20photo

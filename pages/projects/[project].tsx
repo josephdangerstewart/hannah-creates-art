@@ -28,7 +28,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export default function ProjectPage({ project }: { project: IProject }) {
-	console.log(project);
+	if (!project) {
+		return null;
+	}
+
 	return (
 		<Page>
 			<ContentHeader

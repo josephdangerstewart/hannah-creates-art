@@ -9,7 +9,7 @@ const readdir = util.promisify(fs.readdir);
 const readFile = util.promisify(fs.readFile);
 const exists = util.promisify(fs.exists);
 
-const ID_REGEX = /^[a-zA-Z-]*$/g;
+const ID_REGEX = /^[a-zA-Z-0-9]*$/g;
 
 export class ServerProjectRepository implements IProjectRepository {
 	private basePath = '';
