@@ -13,9 +13,11 @@ export const Header: React.FC = () => {
 		<Container>
 			<NextLink href="/">
 				<LogoLink>
-					<LogoText color="accent1">hannah</LogoText>
-					<LogoText color="accent2">creates</LogoText>
-					<LogoText color="accent3">art</LogoText>
+					<span>
+						<LogoText color="accent1">hannah</LogoText>
+						<LogoText color="accent2">creates</LogoText>
+						<LogoText color="accent3">art</LogoText>
+					</span>
 				</LogoLink>
 			</NextLink>
 			<LinkContainer>

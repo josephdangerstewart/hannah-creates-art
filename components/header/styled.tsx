@@ -19,7 +19,7 @@ export const LogoText = styled.span<{ color: keyof Theme['color'] }>`
 	color: ${({ theme, color }) => theme.color[color]};
 	${({ theme }) => theme.generateTransition('color')}
 
-	${LogoLink}:hover & {
+	${LogoLink}:hover span & {
 		color: ${({ color, theme }) => theme.hover(theme.color[color])};
 	}
 `;
