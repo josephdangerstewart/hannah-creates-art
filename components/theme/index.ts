@@ -3,10 +3,10 @@ import { lighten } from 'polished';
 
 export const defaultTheme = {
 	color: {
-		yellow: '#F8DE6F',
-		lightOrange: '#F2A765',
-		darkOrange: '#D87152',
-		cyan: '#56A1AE',
+		accent1: '#F8DE6F',
+		accent2: '#F2A765',
+		accent3: '#D87152',
+		primary: '#56A1AE',
 		white: '#FDFFF7',
 	},
 	font: {

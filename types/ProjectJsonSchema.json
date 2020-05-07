@@ -1,0 +1,25 @@
+{
+	"type": "object",
+	"properties": {
+		"name": {
+			"type": "string",
+			"description": "The name of the project that will be displayed on the page"
+		},
+		"thumbnail": {
+			"type": "string",
+			"description": "The url for the thumbnail for the project (used on the home page)"
+		},
+		"projectDescription": {
+			"type": "string",
+			"description": "A short description of the project."
+		},
+		"photos": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			},
+			"description": "The urls for the images being displayed on the projects page"
+		}
+	},
+	"required": ["name", "thumbnail", "projectDescription", "photos"]
+}

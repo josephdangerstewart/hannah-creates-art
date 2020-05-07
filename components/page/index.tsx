@@ -1,10 +1,18 @@
 import React from 'react';
 import Head from 'next/head';
-import { ThemeProvider } from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 import { defaultTheme } from '../theme';
 import { Header } from '../header';
 
-export const Page: React.FC = ({ children }) => {
+export interface PageProps {
+	padding?: string;
+}
+
+const Root = styled.div<PageProps>`
+	${({ padding }) => padding ? `padding: ${padding};` : ''};
+`;
+
+export const Page: React.FC<PageProps> = ({ children, padding }) => {
 	return (
 		<>
 			<Head>
@@ -26,7 +34,9 @@ export const Page: React.FC = ({ children }) => {
 			`}</style>
 			<ThemeProvider theme={defaultTheme}>
 				<Header />
-				{children}
+				<Root padding={padding}>
+					{children}
+				</Root>
 			</ThemeProvider>
 		</>
 	);

@@ -1,13 +1,11 @@
 import React from 'react';
+import Link from 'next/link';
 import {
 	Container,
-	LinkImageContainer,
-	LinkImage,
-	LinkOuterCircle,
 	FlexLinkWrapper,
+	StyledCircleImage,
 } from './styled';
 import { IProject } from '../../types/IProject';
-import Link from 'next/link';
 
 interface ProjectLinksProps {
 	projects: IProject[];
@@ -19,13 +17,9 @@ export const ProjectLinks: React.FC<ProjectLinksProps> = ({ projects }) => {
 			{projects.map(p => (
 				<FlexLinkWrapper key={p.href}>
 					<Link href={p.href}>
-						<LinkOuterCircle>
-							<LinkImageContainer>
-								<LinkImage
-									imageUrl={p.thumbnail}
-								/>
-							</LinkImageContainer>
-						</LinkOuterCircle>
+						<StyledCircleImage
+							imageUrl={p.thumbnail}
+						/>
 					</Link>
 				</FlexLinkWrapper>
 			))}

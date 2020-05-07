@@ -1,4 +1,9 @@
 import { styled } from '../theme';
+import { CircleImage } from '../circle-image';
+
+export const StyledCircleImage = styled(CircleImage)`
+	cursor: pointer;
+`;
 
 export const Container = styled.div`
 	width: 100%;
@@ -9,68 +14,37 @@ export const Container = styled.div`
 	max-width: 1600px;
 `;
 
-export const LinkOuterCircle = styled.div`
-	width: 100%;
-	padding-top: 100%;
-	flex-shrink: 0;
-	position: relative;
-	border-radius: 50%;
-	cursor: pointer;
-	${({ theme }) => theme.generateTransition('background-color')}
-`;
-
 export const FlexLinkWrapper = styled.div`
 	flex: 0 0 33.33333333%;
 	padding: 50px;
 
 	&:nth-child(3n+1) {
-		${LinkOuterCircle} {
-			background-color: ${({ theme }) => theme.color.yellow};
+		${StyledCircleImage} {
+			background-color: ${({ theme }) => theme.color.accent1};
 
 			&:hover {
-				background-color: ${({ theme }) => theme.hover(theme.color.yellow)}
+				background-color: ${({ theme }) => theme.hover(theme.color.accent1)}
 			}
 		}
 	}
 
 	&:nth-child(3n+2) {
-		${LinkOuterCircle} {
-			background-color: ${({ theme }) => theme.color.darkOrange};
+		${StyledCircleImage} {
+			background-color: ${({ theme }) => theme.color.accent3};
 
 			&:hover {
-				background-color: ${({ theme }) => theme.hover(theme.color.darkOrange)}
+				background-color: ${({ theme }) => theme.hover(theme.color.accent3)}
 			}
 		}
 	}
 
 	&:nth-child(3n) {
-		${LinkOuterCircle} {
-			background-color: ${({ theme }) => theme.color.lightOrange};
+		${StyledCircleImage} {
+			background-color: ${({ theme }) => theme.color.accent2};
 
 			&:hover {
-				background-color: ${({ theme }) => theme.hover(theme.color.lightOrange)}
+				background-color: ${({ theme }) => theme.hover(theme.color.accent2)}
 			}
 		}
 	}
-`;
-
-export const LinkImageContainer = styled.div`
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-`;
-
-export const LinkImage = styled.div<{ imageUrl: string }>`
-	width: 60%;
-	height: 60%;
-	border-radius: 50%;
-	background-image: url(${({ imageUrl }) => imageUrl});
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: 100%;
 `;
