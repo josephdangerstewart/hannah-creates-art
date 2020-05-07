@@ -1,4 +1,5 @@
 import baseStyled, { ThemedStyledInterface } from 'styled-components';
+import { lighten } from 'polished';
 
 export const defaultTheme = {
 	color: {
@@ -11,7 +12,10 @@ export const defaultTheme = {
 	font: {
 		bodyFont: 'Nunito',
 		headerFont: 'Nunito',
-	}
+	},
+	hover: lighten(0.1),
+	transitionDuration: '0.6s',
+	generateTransition: (property: string) => `transition: ${property} 0.6s;`
 };
 
 export type Theme = typeof defaultTheme;

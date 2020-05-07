@@ -15,6 +15,8 @@ export const LinkOuterCircle = styled.div`
 	flex-shrink: 0;
 	position: relative;
 	border-radius: 50%;
+	cursor: pointer;
+	${({ theme }) => theme.generateTransition('background-color')}
 `;
 
 export const FlexLinkWrapper = styled.div`
@@ -24,18 +26,30 @@ export const FlexLinkWrapper = styled.div`
 	&:nth-child(3n+1) {
 		${LinkOuterCircle} {
 			background-color: ${({ theme }) => theme.color.yellow};
+
+			&:hover {
+				background-color: ${({ theme }) => theme.hover(theme.color.yellow)}
+			}
 		}
 	}
 
 	&:nth-child(3n+2) {
 		${LinkOuterCircle} {
 			background-color: ${({ theme }) => theme.color.darkOrange};
+
+			&:hover {
+				background-color: ${({ theme }) => theme.hover(theme.color.darkOrange)}
+			}
 		}
 	}
 
 	&:nth-child(3n) {
 		${LinkOuterCircle} {
 			background-color: ${({ theme }) => theme.color.lightOrange};
+
+			&:hover {
+				background-color: ${({ theme }) => theme.hover(theme.color.lightOrange)}
+			}
 		}
 	}
 `;
