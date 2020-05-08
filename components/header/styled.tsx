@@ -6,9 +6,13 @@ export const Container = styled.div`
 	background-color: #56A1AE;
 	padding: 25px 40px;
 	display: flex;
-	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
+
+	@media ${({ theme }) => theme.breakpoints.mobile} {
+		padding: 25px 0;
+		flex-direction: column;
+	}
 `;
 
 export const LogoLink = styled.a`
@@ -20,9 +24,14 @@ export const LogoText = styled.span<{ color: keyof Theme['color'] }>`
 	font: 35px ${({ theme }) => theme.font.headerFont};
 	color: ${({ theme, color }) => theme.color[color]};
 	${({ theme }) => theme.generateTransition('color')}
+	word-break: break-all;
 
 	${LogoLink}:hover span & {
 		color: ${({ color, theme }) => theme.hover(theme.color[color])};
+	}
+
+	@media ${({ theme }) => theme.breakpoints.mobile} {
+		font-size: 28px;
 	}
 `;
 
@@ -30,6 +39,10 @@ const LinkText = styled.span`
 	font: 18px ${({ theme }) => theme.font.bodyFont};
 	color: ${({ theme }) => theme.color.white};
 	text-decoration: none !important;
+
+	@media ${({ theme }) => theme.breakpoints.mobile} {
+		font-size: 14px;
+	}
 `;
 
 const StyledLink = styled.a`
@@ -55,6 +68,12 @@ const LinkWrapper = styled.div<{ color: keyof Theme['color'] }>`
 
 	${StyledLink}:last-child & {
 		margin-right: 0;
+	}
+
+	@media ${({ theme }) => theme.breakpoints.mobile} {
+		width: 48px;
+		height: 48px;
+		margin-top: 8px;
 	}
 `;
 

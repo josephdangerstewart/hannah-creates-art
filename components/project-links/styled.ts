@@ -13,6 +13,11 @@ export const Container = styled.div`
 	justify-content: center;
 	margin: 0 auto;
 	max-width: 1600px;
+
+	@media ${({ theme }) => theme.breakpoints.mobile} {
+		flex-direction: column;
+		flex-wrap: nowrap;
+	}
 `;
 
 export const FlexLinkWrapper = styled.div`
@@ -47,5 +52,12 @@ export const FlexLinkWrapper = styled.div`
 				background-color: ${({ theme }) => theme.hover(theme.color.accent2)}
 			}
 		}
+	}
+
+	@media ${({ theme }) => theme.breakpoints.mobile} {
+		width: 100%;
+		padding: 40px 10px;
+		max-width: 300px;
+		margin: auto;
 	}
 `;

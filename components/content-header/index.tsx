@@ -20,7 +20,7 @@ export const ContentHeader: React.FC<ContentHeaderProps> = ({
 }) => (
 	<ColumnLayout margin="30px 0 60px">
 		<Column>
-			<ColumnContent padding="0 60px 0 0">
+			<ColumnContent desktopPadding="0 60px 0 0" mobilePadding="0 15px">
 				<ContentContainer position="left" maxWidth={350}>
 					<CircleImage
 						imageUrl={imageUrl}
@@ -30,7 +30,7 @@ export const ContentHeader: React.FC<ContentHeaderProps> = ({
 			</ColumnContent>
 		</Column>
 		<Column>
-			<ColumnContent>
+			<ColumnContent mobilePadding="30px 15px 0">
 				<ContentContainer position="right" maxWidth={400}>
 					<Title color={color}>{title}</Title>
 					<BodyText>{description}</BodyText>

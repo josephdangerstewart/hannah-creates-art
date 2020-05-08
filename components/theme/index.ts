@@ -13,6 +13,9 @@ export const defaultTheme = {
 		bodyFont: 'Nunito',
 		headerFont: 'Nunito',
 	},
+	breakpoints: {
+		mobile: '(max-width: 630px)',
+	},
 	hover: lighten(0.1),
 	transitionDuration: '0.6s',
 	generateTransition: (property: string) => `transition: ${property} 0.6s;`

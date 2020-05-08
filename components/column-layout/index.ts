@@ -43,7 +43,7 @@ export const ColumnLayout = styled.div<ColumnLayoutProps>`
 		}
 	` : ''}
 
-	@media (max-width: 680px) {
+	@media ${({ theme }) => theme.breakpoints.mobile} {
 		flex-direction: column;
 	}
 `;
