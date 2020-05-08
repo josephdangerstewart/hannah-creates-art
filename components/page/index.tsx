@@ -3,6 +3,7 @@ import Head from 'next/head';
 import styled, { ThemeProvider } from 'styled-components';
 import { defaultTheme } from '../theme';
 import { Header } from '../header';
+import { Footer } from '../footer';
 
 export interface PageProps {
 	padding?: string;
@@ -37,6 +38,7 @@ export const Page: React.FC<PageProps> = ({ children, padding }) => {
 				<Root padding={padding}>
 					{children}
 				</Root>
+				<Footer />
 			</ThemeProvider>
 		</>
 	);
