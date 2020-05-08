@@ -14,3 +14,13 @@ export const BodyText = styled.p`
 	color: ${({ theme }) => theme.color.primary};
 	margin: 0;
 `;
+
+export const A = styled.a`
+	font: 16px ${({ theme }) => theme.font.bodyFont};
+	color: ${({ theme }) => theme.color.primary};
+	text-decoration: underline;
+
+	&:hover {
+		color: ${({ theme }) => theme.hover(theme.color.primary)}
+	}
+`;
