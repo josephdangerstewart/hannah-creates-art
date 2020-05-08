@@ -6,6 +6,7 @@ export const Container = styled.div`
 	background-color: #56A1AE;
 	padding: 25px 40px;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
 `;

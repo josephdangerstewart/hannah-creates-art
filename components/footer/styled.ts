@@ -4,6 +4,7 @@ export const Container = styled.div`
 	background-color: ${({ theme }) => theme.color.primary};
 	padding: 20px 35px;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 `;
 
