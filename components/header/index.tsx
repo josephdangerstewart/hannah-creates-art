@@ -21,7 +21,7 @@ export const Header: React.FC = () => {
 				</LogoLink>
 			</NextLink>
 			<LinkContainer>
-				<Link color="accent1">about</Link>
+				<Link color="accent1" href="/about">about</Link>
 				<Link color="accent2">blog</Link>
 				<Link color="accent3" href="/">works</Link>
 			</LinkContainer>

@@ -31,6 +31,10 @@ const LinkText = styled.span`
 	text-decoration: none !important;
 `;
 
+const StyledLink = styled.a`
+	text-decoration: none;
+`;
+
 const LinkWrapper = styled.div<{ color: keyof Theme['color'] }>`
 	width: 68px;
 	height: 68px;
@@ -48,13 +52,9 @@ const LinkWrapper = styled.div<{ color: keyof Theme['color'] }>`
 		background-color: ${({ theme, color }) => theme.hover(theme.color[color])}
 	}
 
-	&:last-child {
+	${StyledLink}:last-child & {
 		margin-right: 0;
 	}
-`;
-
-const StyledLink = styled.a`
-	text-decoration: none;
 `;
 
 export const Link: React.FC<{ color: keyof Theme['color']; href?: string }> = ({
@@ -70,9 +70,11 @@ export const Link: React.FC<{ color: keyof Theme['color']; href?: string }> = ({
 		</StyledLink>
 	</NextLink>
 ) : (
-	<LinkWrapper color={color}>
-		<LinkText>{children}</LinkText>
-	</LinkWrapper>
+	<StyledLink>
+		<LinkWrapper color={color}>
+			<LinkText>{children}</LinkText>
+		</LinkWrapper>
+	</StyledLink>
 );
 
 export const LinkContainer = styled.div`
