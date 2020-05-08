@@ -9,8 +9,15 @@ export interface PageProps {
 	padding?: string;
 }
 
-const Root = styled.div<PageProps>`
+const Container = styled.div`
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+`;
+
+const Content = styled.div<PageProps>`
 	${({ padding }) => padding ? `padding: ${padding};` : ''};
+	flex-grow: 1;
 `;
 
 export const Page: React.FC<PageProps> = ({ children, padding }) => {
@@ -34,11 +41,13 @@ export const Page: React.FC<PageProps> = ({ children, padding }) => {
 				}
 			`}</style>
 			<ThemeProvider theme={defaultTheme}>
-				<Header />
-				<Root padding={padding}>
-					{children}
-				</Root>
-				<Footer />
+				<Container>
+					<Header />
+					<Content padding={padding}>
+						{children}
+					</Content>
+					<Footer />
+				</Container>
 			</ThemeProvider>
 		</>
 	);
