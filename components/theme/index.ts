@@ -15,6 +15,7 @@ export const defaultTheme = {
 	},
 	breakpoints: {
 		mobile: '(max-width: 630px)',
+		desktop: '(min-width: 631px)',
 	},
 	hover: lighten(0.1),
 	transitionDuration: '0.6s',

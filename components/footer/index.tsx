@@ -21,13 +21,13 @@ export const Footer: React.FC = () => {
 				<LogoCircle color="accent3" />
 			</LogoCircleContainer>
 			<ContactLinksContainer>
-				<ContactLink color="accent1" href="mailto:hannah.mclaughlin.art@gmail.com" target="_blank" rel="noopener noreferrer">
+				<ContactLink color="accent1" href="mailto:hannah.mclaughlin.art@gmail.com" target="_blank" rel="noopener noreferrer nofollow">
 					<MailIcon />
 				</ContactLink>
-				<ContactLink color="accent2" href="https://www.instagram.com/hannah.creates.art/" target="_blank" rel="noopener noreferrer">
+				<ContactLink color="accent2" href="https://www.instagram.com/hannah.creates.art/" target="_blank" rel="noopener noreferrer nofollow">
 					<InstagramIcon />
 				</ContactLink>
-				<ContactLink color="accent3" href="https://www.linkedin.com/in/hannah-mclaughlin-126b24143" target="_blank" rel="noopener noreferrer">
+				<ContactLink color="accent3" href="https://www.linkedin.com/in/hannah-mclaughlin-126b24143" target="_blank" rel="noopener noreferrer nofollow">
 					<LinkedInIcon />
 				</ContactLink>
 			</ContactLinksContainer>
