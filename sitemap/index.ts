@@ -2,24 +2,26 @@ import { IProject } from '../types/IProject';
 
 function generateSiteMapForProjects(projects: IProject[], domain: string) {
 	let lastProject = 0;
+	let lastProjectDateString = '';
 	let projectsXml = '';
 
 	for (const project of projects) {
 		const projectDate = Date.parse(project.lastModified ?? project.createdAt);
 		if (projectDate > lastProject) {
 			lastProject = projectDate;
+			lastProjectDateString = project.lastModified ?? project.createdAt;
 		}
 
 		projectsXml += `
 			<url>
 				<loc>${domain}${project.href}</loc>
-				<lastmod>${projectDate}</lastmod>
+				<lastmod>${project.lastModified ?? project.createdAt}</lastmod>
 			</url>
 		`;
 	}
 
 	return {
-		lastProject,
+		lastProject: lastProjectDateString,
 		projectsXml,
 	};
 }
