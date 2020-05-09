@@ -30,7 +30,6 @@ export class ServerProjectRepository implements IProjectRepository {
 				const parsedContent = yaml.parse(content);
 
 				if (!parsedContent) {
-					console.log('returning null in get projects');
 					return null;
 				}
 

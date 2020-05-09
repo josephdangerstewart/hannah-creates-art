@@ -5,4 +5,6 @@ export interface IProject {
 	name: string;
 	projectDescription: string;
 	photos: string[];
+	createdAt: string;
+	lastModified: string;
 }

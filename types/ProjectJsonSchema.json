@@ -19,7 +19,15 @@
 				"type": "string"
 			},
 			"description": "The urls for the images being displayed on the projects page"
+		},
+		"lastModified": {
+			"type": "string",
+			"format": "date"
+		},
+		"createdAt": {
+			"type": "string",
+			"format": "date"
 		}
 	},
-	"required": ["name", "thumbnail", "projectDescription", "photos"]
+	"required": ["name", "thumbnail", "projectDescription", "photos", "lastModified", "createdAt"]
 }
