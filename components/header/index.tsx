@@ -22,7 +22,7 @@ export const Header: React.FC = () => {
 			</NextLink>
 			<LinkContainer>
 				<Link color="accent1" href="/about">about</Link>
-				<Link color="accent2">blog</Link>
+				<Link color="accent2" href="/blog">blog</Link>
 				<Link color="accent3" href="/">works</Link>
 			</LinkContainer>
 		</Container>
