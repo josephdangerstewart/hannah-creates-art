@@ -16,7 +16,7 @@ export const ProjectLinks: React.FC<ProjectLinksProps> = ({ projects }) => {
 		<Container>
 			{projects.map(p => (
 				<FlexLinkWrapper key={p.href}>
-					<Link href={p.href}>
+					<Link href="/projects/[project]" as={p.href}>
 						<a>
 							<StyledCircleImage
 								imageUrl={p.thumbnail}
