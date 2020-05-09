@@ -1,4 +1,5 @@
 import { styled, Theme } from './theme';
+import { css } from 'styled-components';
 
 export const Title = styled.h1<{ color?: keyof Theme['color'] }>`
 	text-transform: uppercase;
@@ -9,13 +10,7 @@ export const Title = styled.h1<{ color?: keyof Theme['color'] }>`
 	color: ${({ theme, color }) => color ? theme.color[color] : theme.color.accent2};
 `;
 
-export const BodyText = styled.p`
-	font: 16px ${({ theme }) => theme.font.bodyFont};
-	color: ${({ theme }) => theme.color.primary};
-	margin: 0;
-`;
-
-export const A = styled.a`
+const linkStyles = css`
 	font: 16px ${({ theme }) => theme.font.bodyFont};
 	color: ${({ theme }) => theme.color.primary};
 	text-decoration: underline;
@@ -23,4 +18,18 @@ export const A = styled.a`
 	&:hover {
 		color: ${({ theme }) => theme.hover(theme.color.primary)}
 	}
+`;
+
+export const BodyText = styled.p`
+	font: 16px ${({ theme }) => theme.font.bodyFont};
+	color: ${({ theme }) => theme.color.primary};
+	margin: 0;
+
+	& a {
+		${linkStyles}
+	}
+`;
+
+export const A = styled.a`
+	${linkStyles}
 `;

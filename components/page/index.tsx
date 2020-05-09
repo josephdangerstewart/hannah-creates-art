@@ -39,6 +39,10 @@ export const Page: React.FC<PageProps> = ({ children, padding }) => {
 					padding: 0;
 					margin: 0;
 				}
+
+				body {
+					background-color: ${defaultTheme.color.pureWhite};
+				}
 			`}</style>
 			<ThemeProvider theme={defaultTheme}>
 				<Container>

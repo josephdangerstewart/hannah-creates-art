@@ -8,6 +8,7 @@ export const defaultTheme = {
 		accent3: '#D87152',
 		primary: '#56A1AE',
 		white: '#FDFFF7',
+		pureWhite: '#FFFFFF',
 	},
 	font: {
 		bodyFont: 'Nunito',

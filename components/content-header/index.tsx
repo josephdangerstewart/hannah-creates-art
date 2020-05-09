@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactMarkdown from 'react-markdown';
 import { Theme } from '../theme';
 import { CircleImage } from '../circle-image';
 import { Title, BodyText } from '../common-styled';
@@ -10,6 +11,7 @@ export interface ContentHeaderProps {
 	description: string;
 	imageUrl: string;
 	color: keyof Theme['color'];
+	fillImage?: boolean;
 }
 
 export const ContentHeader: React.FC<ContentHeaderProps> = ({
@@ -17,6 +19,7 @@ export const ContentHeader: React.FC<ContentHeaderProps> = ({
 	description,
 	imageUrl,
 	color,
+	fillImage,
 }) => (
 	<ColumnLayout margin="30px 0 60px">
 		<Column>
@@ -25,6 +28,7 @@ export const ContentHeader: React.FC<ContentHeaderProps> = ({
 					<CircleImage
 						imageUrl={imageUrl}
 						color={color}
+						fillImage={fillImage}
 					/>
 				</ContentContainer>
 			</ColumnContent>
@@ -33,7 +37,12 @@ export const ContentHeader: React.FC<ContentHeaderProps> = ({
 			<ColumnContent mobilePadding="30px 15px 0">
 				<ContentContainer position="right" maxWidth={400}>
 					<Title color={color}>{title}</Title>
-					<BodyText>{description}</BodyText>
+					<BodyText>
+						<ReactMarkdown
+							source={description}
+							linkTarget="_blank"
+						/>
+					</BodyText>
 				</ContentContainer>
 			</ColumnContent>
 		</Column>

@@ -21,30 +21,33 @@ const ImageContainer = styled.div`
 	justify-content: center;
 `;
 
-const Image = styled.div<{ imageUrl: string }>`
+const Image = styled.div<{ imageUrl: string; fillImage?: boolean }>`
 	width: 80%;
 	height: 80%;
 	border-radius: 50%;
 	background-image: url(${({ imageUrl }) => imageUrl});
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: 100%;
+	background-size: ${({ fillImage }) => fillImage ? 'cover' : '100%'};
+	background-color: ${({ theme }) => theme.color.pureWhite};
 `;
 
 export interface CircleImageProps {
 	imageUrl: string;
 	color?: keyof Theme['color'];
 	className?: string;
+	fillImage?: boolean;
 }
 
 export const CircleImage: React.FC<CircleImageProps> = ({
 	imageUrl,
 	color,
 	className,
+	fillImage,
 }) => (
 	<ImageOuterCircle color={color} className={className}>
 		<ImageContainer>
-			<Image imageUrl={imageUrl} />
+			<Image imageUrl={imageUrl} fillImage={fillImage} />
 		</ImageContainer>
 	</ImageOuterCircle>
 );
