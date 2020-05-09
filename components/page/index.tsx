@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Head from 'next/head';
 import styled, { ThemeProvider } from 'styled-components';
 import { defaultTheme } from '../theme';
 import { Header } from '../header';
 import { Footer } from '../footer';
+import { initGA, logPageView } from './ga';
 
 export interface PageProps {
 	padding?: string;
@@ -21,6 +22,15 @@ const Content = styled.div<PageProps>`
 `;
 
 export const Page: React.FC<PageProps> = ({ children, padding }) => {
+	useEffect(() => {
+		if (!(window as any).GA_INITIALIZED) {
+			initGA();
+			(window as any).GA_INITIALIZED = true;
+		}
+
+		logPageView();
+	}, []);
+
 	return (
 		<>
 			<Head>

@@ -15,6 +15,7 @@
     "polished": "^3.6.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-ga": "^2.7.0",
     "react-markdown": "^4.3.1",
     "simple-react-lightbox": "^2.7.3-2",
     "styled-components": "^5.1.0",
