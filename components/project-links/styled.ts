@@ -23,6 +23,7 @@ export const Container = styled.div`
 export const FlexLinkWrapper = styled.div`
 	flex: 0 0 33.33333333%;
 	padding: 50px;
+	perspective: 3000px;
 
 	&:nth-child(3n+1) {
 		${StyledCircleImage} {
