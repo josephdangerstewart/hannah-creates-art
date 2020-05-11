@@ -1,5 +1,25 @@
+import { transparentize } from 'polished';
 import { styled } from '../theme';
 import { CircleImage } from '../circle-image';
+
+export const ProjectTitleContainer = styled.div`
+	background-color: ${({ theme }) => transparentize(0.3, theme.color.black)};
+	border-radius: 50%;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+`;
+
+export const ProjectTitle = styled.span`
+	color: ${({ theme }) => theme.color.white};
+	font: 20px ${({ theme }) => theme.font.bodyFont};
+`;
 
 export const StyledCircleImage = styled(CircleImage)`
 	cursor: pointer;

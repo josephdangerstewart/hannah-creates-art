@@ -5,22 +5,27 @@ import {
 	Container,
 	FlexLinkWrapper,
 	StyledCircleImage,
+	ProjectTitleContainer,
+	ProjectTitle,
 } from './styled';
 import { IProject } from '../../types/IProject';
+
+const AnimatedProjectTitleContainer = animated(ProjectTitleContainer);
 
 const ProjectImage: React.FC<{ project: IProject }> = ({ project }) => {
 	const [vals, set] = useSpring(() => ({
 		scale: 1,
 		dropShadow: -200,
+		titleOpacity: 0,
 		config: config.stiff,
 	}));
 
 	const onMouseMove = useCallback(() => {
-		set({ scale: 1.1, dropShadow: -25 });
+		set({ scale: 1.1, dropShadow: -25, titleOpacity: 1 });
 	}, [set]);
 
 	const onMouseLeave = useCallback(() => {
-		set({ scale: 1, dropShadow: -200 });
+		set({ scale: 1, dropShadow: -200, titleOpacity: 0 });
 	}, [set]);
 
 	return (
@@ -29,10 +34,18 @@ const ProjectImage: React.FC<{ project: IProject }> = ({ project }) => {
 				transform: vals.scale.interpolate(s => `scale(${s})`),
 				boxShadow: vals.dropShadow.interpolate(v => `0px 30px 85px ${v}px rgba(0, 0, 0, 0.4)`),
 				borderRadius: '50%',
+				position: 'relative',
 			}}
 			onMouseMove={onMouseMove}
 			onMouseLeave={onMouseLeave}
 		>
+			<AnimatedProjectTitleContainer
+				style={{
+					opacity: vals.titleOpacity,
+				}}
+			>
+				<ProjectTitle>{project.name}</ProjectTitle>
+			</AnimatedProjectTitleContainer>
 			<StyledCircleImage
 				imageUrl={project.thumbnail}
 			/>
