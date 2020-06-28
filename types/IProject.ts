@@ -7,4 +7,5 @@ export interface IProject {
 	photos: string[];
 	createdAt: string;
 	lastModified: string;
+	isHidden: boolean;
 }

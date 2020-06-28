@@ -6,7 +6,7 @@ import { getServerOnlyProjectRepository } from '../api/server-util';
 
 export const getStaticProps: GetStaticProps = async () => {
 	const repository = getServerOnlyProjectRepository();
-	const projects = await repository.getProjects();
+	const projects = (await repository.getProjects()).filter(x => !x.isHidden);
 	return {
 		props: { projects },
 	};

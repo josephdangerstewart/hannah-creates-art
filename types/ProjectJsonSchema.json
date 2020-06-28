@@ -27,6 +27,10 @@
 		"createdAt": {
 			"type": "string",
 			"format": "date"
+		},
+		"isHidden": {
+			"type": "boolean",
+			"description": "Whether or not the project is displayed on the home page"
 		}
 	},
 	"required": ["name", "thumbnail", "projectDescription", "photos", "lastModified", "createdAt"]
