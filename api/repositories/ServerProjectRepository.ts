@@ -31,7 +31,7 @@ export class ServerProjectRepository implements IProjectRepository {
 			.map(({ content, id }) => {
 				const parsedContent = yaml.parse(content);
 
-				if (!parsedContent) {
+				if (!parsedContent || parsedContent.isWip) {
 					return null;
 				}
 
@@ -59,7 +59,7 @@ export class ServerProjectRepository implements IProjectRepository {
 		}
 
 		const parsedContents = yaml.parse(await readFile(filePath, 'utf8'));
-		if (!parsedContents) {
+		if (!parsedContents || parsedContents.isWip) {
 			return null;
 		}
 

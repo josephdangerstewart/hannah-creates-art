@@ -31,6 +31,10 @@
 		"isHidden": {
 			"type": "boolean",
 			"description": "Whether or not the project is displayed on the home page"
+		},
+		"isWip": {
+			"type": "boolean",
+			"description": "If this flag is set to true, this project will be completely inaccessible"
 		}
 	},
 	"required": ["name", "thumbnail", "projectDescription", "photos", "lastModified", "createdAt"]
