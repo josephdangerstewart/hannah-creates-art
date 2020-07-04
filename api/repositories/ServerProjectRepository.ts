@@ -11,6 +11,8 @@ const exists = util.promisify(fs.exists);
 
 export class ServerProjectRepository implements IProjectRepository {
 	private basePath = '';
+	private cloudinaryBaseUrl = 'https://res.cloudinary.com/josephdangerstewart/image/upload/';
+	private thumbnailTransformation = 'c_scale,w_400/';
 	
 	constructor(basePath) {
 		this.basePath = path.resolve(basePath);
@@ -35,6 +37,8 @@ export class ServerProjectRepository implements IProjectRepository {
 
 				return {
 					...parsedContent,
+					photos: parsedContent.map(x => `${this.cloudinaryBaseUrl}${x}`),
+					thumbnail: `${this.cloudinaryBaseUrl}${this.thumbnailTransformation}${parsedContent.thumbnail}`,
 					href: `/projects/${id}`,
 					id,
 				};
@@ -61,6 +65,8 @@ export class ServerProjectRepository implements IProjectRepository {
 
 		return {
 			...parsedContents,
+			photos: parsedContents.map(x => `${this.cloudinaryBaseUrl}${x}`),
+			thumbnail: `${this.cloudinaryBaseUrl}${this.thumbnailTransformation}${parsedContents.thumbnail}`,
 			id,
 			href: `/projects/${id}`,
 		} as IProject;

@@ -1,18 +1,23 @@
 name: Land of Emunah
 projectDescription: |
-  A collaborative project with my good friend Megan Yip. This is our senior show thesis at Biola University and is an on going project.
+  Land of Emunah, in its current form, is a web experience through a fantastical world created by a team of adventurous friends. The players are presented with an overview of the land and begin in a central city. They are given four paths to choose from: land, sea, forest, or desert. From there the player embarks on a journey through the chosen path, facing encounters and choices of how to resolve the situations at hand. As of right now, the experience is short, however, players have the option at the end to contribute to this world with their own imaginations. More is coming to the Land of Emunah, as it is an ongoing and developing project, one of which our team hopes to collaborate with the audience on. 
+
+  Being my Thesis Show this past spring during quarantine, the show displays a creative experience for users and contributors to enjoy. I designed the entire layout of the visual experience of the site, aiming to create something simple and clean while still maintaining a fantasy element to the feel of the experience.
+
+  (Collaborated with [Megan Yip](https://www.meganyipart.com/) and Joseph Stewart).
   
-  For the official experience go to
-  
-  [landofemunah.com](https://landofemunah.com)
-thumbnail: https://res.cloudinary.com/josephdangerstewart/image/upload/v1588994102/hannah-creates-art/land-of-emunah/LOE-Profile.png
+  For the official experience go to [landofemunah.com](https://landofemunah.com)
+
+  Email: <landofemunah@gmail.com>
+
+  Instagram: @landofemunah
+thumbnail: v1593839007/hannah-creates-art/land-of-emunah/V2/LOE-Profile.png
 photos:
-  - https://res.cloudinary.com/josephdangerstewart/image/upload/v1588994102/hannah-creates-art/land-of-emunah/LOE-01.png
-  - https://res.cloudinary.com/josephdangerstewart/image/upload/v1588994102/hannah-creates-art/land-of-emunah/LOE-02.png
-  - https://res.cloudinary.com/josephdangerstewart/image/upload/v1588994101/hannah-creates-art/land-of-emunah/LOE-03.png
-  - https://res.cloudinary.com/josephdangerstewart/image/upload/v1588994101/hannah-creates-art/land-of-emunah/LOE-05.png
-  - https://res.cloudinary.com/josephdangerstewart/image/upload/v1588994102/hannah-creates-art/land-of-emunah/LOE-06.png
-  - https://res.cloudinary.com/josephdangerstewart/image/upload/v1588994102/hannah-creates-art/land-of-emunah/LOE-07.png
-  - https://res.cloudinary.com/josephdangerstewart/image/upload/v1588994102/hannah-creates-art/land-of-emunah/LOE-08.png
-lastModified: 2020-05-08
+  - v1593839012/hannah-creates-art/land-of-emunah/V2/LOE_Computer_and_Phone_Mockup_1.png
+  - v1593839006/hannah-creates-art/land-of-emunah/V2/LOE-02.png
+  - v1593839007/hannah-creates-art/land-of-emunah/V2/LOE-03.png
+  - v1593839008/hannah-creates-art/land-of-emunah/V2/LOE-04.png
+  - v1593839008/hannah-creates-art/land-of-emunah/V2/LOE-06.png
+  - v1593839007/hannah-creates-art/land-of-emunah/V2/LOE-08.png
+lastModified: 2020-07-20
 createdAt: 2020-05-08
