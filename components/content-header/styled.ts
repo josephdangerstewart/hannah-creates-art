@@ -6,6 +6,12 @@ export const Container = styled.div`
 	margin: auto;
 	margin-top: 30px;
 	margin-bottom: 30px;
+
+	&::after {
+		content: '';
+		display: block;
+		clear: both;
+	}
 `;
 
 export const ImageContainer = styled.div`
