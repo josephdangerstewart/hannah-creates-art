@@ -1,25 +1,24 @@
 import { styled } from '../theme';
 
-type Position = "left" | "right";
-export const ContentContainer = styled.div<{ position: Position; maxWidth: number }>`
-	max-width: ${({ maxWidth }) => maxWidth}px;
-	width: 100%;
-	${({ position }) => position === 'left' ? 'margin-left: auto;' : 'margin-right: auto;'}
-
-	@media ${({ theme }) => theme.breakpoints.mobile} {
-		margin: auto;
-	}
+export const Container = styled.div`
+	max-width: 900px;
+	padding: 0 30px;
+	margin: auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
 `;
 
-export const ColumnContent = styled.div<{ desktopPadding?: string; mobilePadding?: string }>`
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	width: 100%;
-	height: 100%;
-	${({ desktopPadding }) => desktopPadding ? `padding: ${desktopPadding};` : ''}
+export const ImageContainer = styled.div`
+	float: left;
+	min-width: 300px;
+	margin-right: 30px;
 
 	@media ${({ theme }) => theme.breakpoints.mobile} {
-		padding: ${({ mobilePadding }) => mobilePadding ?? '0'};
+		float: none;
+		display: block;
+		margin: auto;
+		margin-bottom: 30px;
+		margin-right: 0;
+		min-width: 0;
 	}
 `;
