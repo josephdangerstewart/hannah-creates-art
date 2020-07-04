@@ -18,6 +18,7 @@ export const ImageContainer = styled.div`
 	float: left;
 	min-width: 300px;
 	margin-right: 30px;
+	margin-bottom: 4px;
 
 	@media ${({ theme }) => theme.breakpoints.mobile} {
 		float: none;
