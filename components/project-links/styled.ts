@@ -19,6 +19,8 @@ export const ProjectTitleContainer = styled.div`
 export const ProjectTitle = styled.span`
 	color: ${({ theme }) => theme.color.white};
 	font: 20px ${({ theme }) => theme.font.bodyFont};
+	width: 80%;
+	text-align: center;
 `;
 
 export const StyledCircleImage = styled(CircleImage)`
