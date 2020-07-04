@@ -37,7 +37,7 @@ export class ServerProjectRepository implements IProjectRepository {
 
 				return {
 					...parsedContent,
-					photos: parsedContent.map(x => `${this.cloudinaryBaseUrl}${x}`),
+					photos: parsedContent.photos.map(x => `${this.cloudinaryBaseUrl}${x}`),
 					thumbnail: `${this.cloudinaryBaseUrl}${this.thumbnailTransformation}${parsedContent.thumbnail}`,
 					href: `/projects/${id}`,
 					id,
@@ -65,7 +65,7 @@ export class ServerProjectRepository implements IProjectRepository {
 
 		return {
 			...parsedContents,
-			photos: parsedContents.map(x => `${this.cloudinaryBaseUrl}${x}`),
+			photos: parsedContents.photos.map(x => `${this.cloudinaryBaseUrl}${x}`),
 			thumbnail: `${this.cloudinaryBaseUrl}${this.thumbnailTransformation}${parsedContents.thumbnail}`,
 			id,
 			href: `/projects/${id}`,
