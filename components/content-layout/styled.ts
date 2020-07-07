@@ -1,17 +1,19 @@
 import { styled } from '../theme';
 
+export const HeaderContainer = styled.div`
+	&::after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+`;
+
 export const Container = styled.div`
 	max-width: 900px;
 	padding: 0 30px;
 	margin: auto;
 	margin-top: 30px;
 	margin-bottom: 30px;
-
-	&::after {
-		content: '';
-		display: block;
-		clear: both;
-	}
 `;
 
 export const ImageContainer = styled.div`

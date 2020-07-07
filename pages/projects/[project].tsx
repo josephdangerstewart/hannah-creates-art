@@ -3,7 +3,7 @@ import { Page } from '../../components/page';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { getServerOnlyProjectRepository } from '../../api/server-util';
 import { IProject } from '../../types/IProject';
-import { ContentHeader } from '../../components/content-header';
+import { ContentLayout } from '../../components/content-layout';
 import { ImageGallery } from '../../components/image-gallery';
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
@@ -31,11 +31,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export default function ProjectPage({ project }: { project: IProject }) {
 	return (
 		<Page>
-			<ContentHeader
+			<ContentLayout
 				title={project.name}
 				imageUrl={project.thumbnail}
 				description={project.projectDescription}
-				color="accent2"
+				color="accent3"
 			/>
 			<ImageGallery
 				images={project.photos}
