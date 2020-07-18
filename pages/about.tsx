@@ -15,8 +15,6 @@ to be.
 const aboutContent = `
 **CONTACT INFO**
 
-[949.395.4868](tel:1-949-395-4868)
-
 <hannah.mclaughlin.art@gmail.com>
 `;
 
