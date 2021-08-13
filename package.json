@@ -10,7 +10,7 @@
   "dependencies": {
     "@svgr/webpack": "^5.4.0",
     "fs": "^0.0.1-security",
-    "next": "9.3.6",
+    "next": "11.1.0",
     "path": "^0.12.7",
     "polished": "^3.6.2",
     "react": "16.13.1",
